@@ -3,7 +3,7 @@ class node{
         int data;
         node *nextNode;
     public:
-        node(int value);
+        node(int value,node*);
         void setNext(node*);
         node* getNext();
         void setData(int);

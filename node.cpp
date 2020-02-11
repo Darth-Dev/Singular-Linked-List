@@ -1,8 +1,8 @@
 #include "node.h"
 #include "iostream"
-node::node(int value){
+node::node(int value,node* nodePtr){
     data = value;
-    nextNode = nullptr;
+    nextNode = nodePtr;
 }
 
 void node::setNext(node* nodePtr){

@@ -2,19 +2,15 @@
 #include "node.h"
 
 void prepend(node** head, int value){
-    node* newNode = new node(value);
-    node* current = *head;
-    std::cout << "1\n";
-    newNode->setNext(current);
-    std::cout << "2\n";
+    node* newNode = new node(value, *head);
     head = &newNode;
-    std::cout << "3\n";
 }
 
-void printList(node* node){
-    while(node != nullptr){
-        std::cout << node->getData() << " \n";
-        node = node->getNext();
+void printList(node** head){
+    node* current = *head;
+    while(current != nullptr){
+        std::cout << current->getData() << " \n";
+        current = current->getNext();
     }
 }
 
